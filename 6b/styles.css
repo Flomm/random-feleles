@@ -1,0 +1,122 @@
+body {
+  background-color: #e8e8e8;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-top: 0%;
+}
+header {
+  font-size: xx-large;
+  color: white;
+  text-shadow: 1px 1px #65534f;
+  height: 5%;
+  border-radius: 25px;
+  padding-top: px;
+  background-color: #79a153;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#names {
+  border-radius: 25px;
+  background-color: #d0ced1;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.name_holder {
+  border-radius: 25px;
+  background-color: #79a153;
+  border-color: #79a153;
+  border-style: solid;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+  height: 50px;
+  width: 150px;
+}
+
+.winner {
+  border-radius: 25px;
+  background-color: #b99f7f;
+  border-color: #79a153;
+  border-style: solid;
+  color: #65534f;
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+  height: 50px;
+  width: 150px;
+}
+
+#button_holder {
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+}
+
+#chooseStudent {
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e8e8e8;
+  text-shadow: 2px 2px black;
+  border-radius: 25px;
+  background-color: #65534f;
+  height: 50px;
+  width: 250px;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: #79a153;
+}
+
+#back_to_main {
+  font-weight: bold;
+  background-color: #65534f;
+  border-radius: 25px;
+  padding-top: 12px;
+  margin-left: 5%;
+  text-align: center;
+  width: 14%;
+  height: 5%;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
