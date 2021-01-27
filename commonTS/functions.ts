@@ -1,4 +1,4 @@
-export { generateFields, getChilds, clearFields, chooseRandomStudent, playMusic };
+export { generateFields, startApp };
 
 function generateFields(list: string[]): void {
   for (let i: number = 0; i <= list.length - 1; i++) {
@@ -30,4 +30,13 @@ function chooseRandomStudent(list: string[]): void {
 function playMusic(path: string) {
   let music = new Audio(path);
   music.play();
+}
+
+function startApp(nameList: string[]): void {
+  let inter: number = setInterval(() => chooseRandomStudent(nameList), 50);
+  playMusic('../resources/ticking.mp3');
+  setTimeout((): void => {
+    clearInterval(inter);
+    playMusic('../resources/Bomb+2.mp3');
+  }, 5000);
 }

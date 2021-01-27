@@ -5,10 +5,5 @@ var functions_1 = require("../commonTS/functions");
 window.addEventListener('load', function () { return functions_1.generateFields(lists_1.b6); });
 var button = document.getElementById('chooseStudent');
 button.onclick = function () {
-    var inter = setInterval(function () { return functions_1.chooseRandomStudent(lists_1.b6); }, 50);
-    functions_1.playMusic('../resources/ticking.mp3');
-    setTimeout(function () {
-        clearInterval(inter);
-        functions_1.playMusic('../resources/Bomb+2.mp3');
-    }, 5000);
+    functions_1.startApp(lists_1.b6);
 };

@@ -6,18 +6,13 @@ var functions_1 = require("../commonTS/functions");
 window.addEventListener('load', function () { return functions_1.generateFields(lists_1.b5); });
 var button = document.getElementById('chooseStudent');
 button.onclick = function () {
-    var inter = setInterval(function () { return functions_1.chooseRandomStudent(lists_1.b5); }, 50);
-    functions_1.playMusic('../resources/ticking.mp3');
-    setTimeout(function () {
-        clearInterval(inter);
-        functions_1.playMusic('../resources/Bomb+2.mp3');
-    }, 5000);
+    functions_1.startApp(lists_1.b5);
 };
 
 },{"../commonTS/functions":2,"../commonTS/lists":3}],2:[function(require,module,exports){
 "use strict";
 exports.__esModule = true;
-exports.playMusic = exports.chooseRandomStudent = exports.clearFields = exports.getChilds = exports.generateFields = void 0;
+exports.startApp = exports.generateFields = void 0;
 function generateFields(list) {
     for (var i = 0; i <= list.length - 1; i++) {
         var newField = document.createElement('div');
@@ -30,7 +25,6 @@ exports.generateFields = generateFields;
 function getChilds(name) {
     return document.getElementById(name).children;
 }
-exports.getChilds = getChilds;
 function clearFields() {
     var nameDivs = getChilds('names');
     for (var i = 0; i <= nameDivs.length - 1; i++) {
@@ -38,18 +32,24 @@ function clearFields() {
     }
     return nameDivs;
 }
-exports.clearFields = clearFields;
 function chooseRandomStudent(list) {
     var nameDivs = clearFields();
     var randomName = Math.round(Math.random() * (list.length - 1));
     nameDivs[randomName].classList.add('winner');
 }
-exports.chooseRandomStudent = chooseRandomStudent;
 function playMusic(path) {
     var music = new Audio(path);
     music.play();
 }
-exports.playMusic = playMusic;
+function startApp(nameList) {
+    var inter = setInterval(function () { return chooseRandomStudent(nameList); }, 50);
+    playMusic('../resources/ticking.mp3');
+    setTimeout(function () {
+        clearInterval(inter);
+        playMusic('../resources/Bomb+2.mp3');
+    }, 5000);
+}
+exports.startApp = startApp;
 
 },{}],3:[function(require,module,exports){
 "use strict";
