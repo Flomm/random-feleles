@@ -42,12 +42,15 @@ header {
 }
 
 .name_holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 25px;
   background-color: #79a153;
   border-color: #79a153;
   border-style: solid;
   color: white;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
