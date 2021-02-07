@@ -37,16 +37,14 @@ function chooseRandomStudent(list) {
     var randomName = Math.round(Math.random() * (list.length - 1));
     nameDivs[randomName].classList.add('winner');
 }
-function playMusic(path) {
-    var music = new Audio(path);
-    music.play();
-}
+var ticking = document.getElementById('tick');
+var bomb = document.getElementById('bomb');
 function startApp(nameList) {
     var inter = setInterval(function () { return chooseRandomStudent(nameList); }, 50);
-    playMusic('../resources/ticking.mp3');
+    ticking.play();
     setTimeout(function () {
         clearInterval(inter);
-        playMusic('../resources/Bomb+2.mp3');
+        bomb.play();
     }, 5000);
 }
 exports.startApp = startApp;

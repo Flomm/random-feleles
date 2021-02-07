@@ -27,16 +27,14 @@ function chooseRandomStudent(list: string[]): void {
   nameDivs[randomName].classList.add('winner');
 }
 
-function playMusic(path: string) {
-  let music = new Audio(path);
-  music.play();
-}
+const ticking = document.getElementById('tick') as HTMLAudioElement;
+const bomb = document.getElementById('bomb') as HTMLAudioElement;
 
 function startApp(nameList: string[]): void {
   let inter: number = setInterval(() => chooseRandomStudent(nameList), 50);
-  playMusic('../resources/ticking.mp3');
+  ticking.play();
   setTimeout((): void => {
     clearInterval(inter);
-    playMusic('../resources/Bomb+2.mp3');
+    bomb.play();
   }, 5000);
 }

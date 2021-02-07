@@ -45,8 +45,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
   background-color: #79a153;
+  border-radius: 25px;
   border-color: #79a153;
   border-style: solid;
   color: white;
@@ -63,12 +63,16 @@ header {
 }
 
 .winner {
-  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #b99f7f;
+  border-radius: 25px;
   border-color: #79a153;
   border-style: solid;
   color: #65534f;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
